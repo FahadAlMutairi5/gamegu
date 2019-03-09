@@ -95,7 +95,7 @@ class App extends Component {
                 )
               }
             </div>
-            <div className={`scoreboard ${ this.state.count === 0  this.state.goolNum <= this.state.gussNum.reduce((partial_sum, a) => partial_sum + a, 0) ? '' : 'hide' }`}>
+            <div className={`scoreboard ${ this.state.count === 0  || this.state.goolNum <= this.state.gussNum.reduce((partial_sum, a) => partial_sum + a, 0) ? '' : 'hide' }`}>
               <h2 className="scoreboard-heading animated bounceInLeft">
                 Score Board
               </h2>
@@ -103,7 +103,7 @@ class App extends Component {
                 this.state.goolNum === this.state.gussNum.reduce((partial_sum, a) => partial_sum + a, 0) ? <h1 className="animated jackInTheBox">Congratulations! You Won</h1> :
                         <h1 className="animated jackInTheBox">You Loss! :(</h1>
               }
-              <button class="animated wobble" onClick={this.restart}>Play Again!</button>
+              <button className="animated wobble" onClick={this.restart}>Play Again!</button>
             </div>
           </div>
         
