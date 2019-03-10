@@ -48,14 +48,19 @@ body {
     color: #ffffff;
     display: inline-block;
 }
-.result-bar h2{
+#Rema{
     margin: 0 0 0 5px;
     text-align: left;
     font-weight: normal;
 }
+#LastN{
+    margin: 0 0 0 0px;
+    text-align: right;
+    font-weight: normal;
+}
 .result-bar > h2 span {
-  background: #f14e4e;
-    border-radius: 5px;
+    background: #f14e4e;
+    border-radius: 1px;
     padding: 5px 10px;
     font-size: 18px;
     color: #ffffff;

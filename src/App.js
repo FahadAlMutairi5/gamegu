@@ -76,8 +76,9 @@ class App extends Component {
           <div className="score">
             <h2>Target: <span>{this.state.goolNum}</span></h2>
             <h2>Sum: <span>{this.state.gussNum.reduce((partial_sum, a) => partial_sum + a, 0)}</span></h2>
+            <h2 id="LastN">Last Number: <span>{this.state.gussNum.length < 1 ? 0 : this.state.gussNum[this.state.gussNum.length-1]}</span></h2><br/>
             <div className="result-bar">
-              <h2>Remaining: <span>{this.state.count}</span></h2>
+              <h2 id="Rema">Remaining: <span>{this.state.count}</span></h2>
             </div>
           </div>
         </header>
@@ -87,10 +88,10 @@ class App extends Component {
                 this.state.gussvalue.map((brick, index) =>
                   <div
                     key={brick + 3}
-                    className={`brick ${ this.state.gussNumB.includes(index) ? '' : 'hide'} animated rollIn`}
+                    className={`brick ${ this.state.gussNumB.includes(index) ? '' : 'hide'} animated rollIn slower`}
                     onClick={() => this.revealBrick(index)}
                   >
-                    <span>{brick}</span>
+                    <span className="animated rollIn">{brick}</span>
                   </div>
                 )
               }
